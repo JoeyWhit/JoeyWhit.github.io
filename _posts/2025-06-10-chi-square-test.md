@@ -161,15 +161,14 @@ In the code below, we:
 
 <br>
 ```python
-
-# install the required python libraries
+# Install the required python libraries
 import pandas as pd
 from scipy.stats import chi2_contingency, chi2
 
-# import campaign data
-campaign_data = ...
+# Import campaign data
+campaign_data = pd.read_excel("grocery_database.xlsx", sheet_name = 'campaign_data')
 
-# remove customers who were in the control group
+# Remove customers who were in the control group
 campaign_data = campaign_data.loc[campaign_data["mailer_type"] != "Control"]
 
 ```
