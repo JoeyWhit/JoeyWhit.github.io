@@ -31,6 +31,8 @@ ___
 
 ### Context <a name="overview-context"></a>
 
+This is a work in progress - still need to add text below.
+
 <br>
 <br>
 
@@ -71,38 +73,20 @@ In the code below, we:
 ```python
 
 # import required Python packages
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import MinMaxScaler
-import pandas as pd
-import matplotlib.pyplot as plt
 
 # import tables from database
-transactions = ...
-product_areas = ...
 
 # merge product_area_name on
-transactions = pd.merge(transactions, product_areas, how = "inner", on = "product_area_id")
 
 # drop the non-food category
-transactions.drop(transactions[transactions["product_area_name"] == "Non-Food"].index, inplace = True)
 
 # aggregate sales at customer level (by product area)
-transaction_summary = transactions.groupby(["customer_id", "product_area_name"])["sales_cost"].sum().reset_index()
 
 # pivot data to place product areas as columns
-transaction_summary_pivot = transactions.pivot_table(index = "customer_id",
-                                                    columns = "product_area_name",
-                                                    values = "sales_cost",
-                                                    aggfunc = "sum",
-                                                    fill_value = 0,
-                                                    margins = True,
-                                                    margins_name = "Total").rename_axis(None,axis = 1)
 
 # transform sales into % sales
-transaction_summary_pivot = transaction_summary_pivot.div(transaction_summary_pivot["Total"], axis = 0)
 
 # drop the "total" column as we don't need that for clustering
-data_for_clustering = transaction_summary_pivot.drop(["Total"], axis = 1)
 
 ```
 
@@ -118,17 +102,6 @@ Based upon the shape of the above plot...
 
 <br>
 ### Model Fitting <a name="kmeans-model-fitting"></a>
-
-
-```python
-
-# instantiate our k-means object
-kmeans = KMeans(n_clusters = 3, random_state = 42)
-
-# fit to our data
-kmeans.fit(data_for_clustering_scaled)
-
-```
 
 <br>
 ### Append Clusters To Customers <a name="kmeans-append-clusters"></a>
@@ -183,18 +156,11 @@ ___
 <br>
 # Application <a name="kmeans-application"></a>
 
-Even those this is a simple solution, based upon high level product areas it will help leaders in the business, and category managers gain a clearer understanding of the customer base.
-
-Tracking these clusters over time would allow the client to more quickly react to dietary trends, and adjust their messaging and inventory accordingly.
-
-Based upon these clusters, the client will be able to target customers more accurately - promoting products & discounts to customers that are truly relevant to them - overall enabling a more customer focused communication strategy.
 
 ___
 <br>
 # Growth & Next Steps <a name="growth-next-steps"></a>
 
-It would be interesting to run this clustering/segmentation at a lower level of product areas, so rather than just the four areas of Meat, Dairy, Fruit, Vegetables - clustering spend across the sub-categories *below* those categories.  This would mean we could create more specific clusters, and get an even more granular understanding of dietary preferences within the customer base.
+It would be interesting to run... 
 
-Here we've just focused on variables that are linked directly to sales - it could be interesting to also include customer metrics such as distance to store, gender etc to give a even more well-rounded customer segmentation.
-
-It would be useful to test other clustering approaches such as hierarchical clustering or DBSCAN to compare the results.
+It would be useful to test other... 
