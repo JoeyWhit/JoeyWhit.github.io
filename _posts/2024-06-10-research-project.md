@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2024 Research Project: On the 3:2 spin-orbit resonance of Mercury
+title: 2024 Research Project - On the 3:2 spin-orbit resonance of Mercury
 image: "/posts/Mercury_in_true_color.jpg"
 tags: [Python, Linux, Astrophysics, Mathematics]
 ---
