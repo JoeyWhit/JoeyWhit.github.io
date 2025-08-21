@@ -17,12 +17,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # About Section
 subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
 location: "Melbourne, AUS"
-resume_url: /docs/resume.docx
+resume_url: /docs/generic_resume_JW.pdf
 avatar_image: /img/cropped_profilepic.jpg
 
 #-------------------------------
 # Contact links
-linkedln: "https://www.linkedin.com/in/joseph-whittaker-58876a257/" # Add your linkedln handle
+linkedln: "https://www.linkedin.com/in/joseph-e-whittaker" # Add your linkedln handle
 github: "https://github.com/JoeyWhit"  # Add your github handle
 
 paginate: 6
