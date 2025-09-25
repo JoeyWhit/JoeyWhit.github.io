@@ -31,9 +31,12 @@ ___
 
 ### Context <a name="overview-context"></a>
 
-This is a work in progress - still need to add text below.
+In this work, we investigate the range of *mean anomalies*, *orientations*, and *asphericities* of the planet *Mercury* that give rise to the 3:2 spin-orbit resonance. Simulations were performed with code produced by the associate professor, Alexander Heger, within Python. For this spin-orbit resonance to occur, there needs to be a minimum energy state, which is for an orientation of 0 degrees. This also yields an upper limit of asphericity of 0.253 +/- 0.001 (asphericity is a measure of the *ratio of moment of inertia* for an object, or how *aspherical* an object is - a higher asphericity indicates a more aspherical object, almost flatter like a pancake). 
 
 <br>
+
+
+
 <br>
 
 ### Actions <a name="overview-actions"></a>
@@ -164,3 +167,4 @@ ___
 It would be interesting to run... 
 
 It would be useful to test other... 
+
