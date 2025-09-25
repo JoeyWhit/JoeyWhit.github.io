@@ -35,6 +35,12 @@ In this work, we investigate the range of *mean anomalies*, *orientations*, and 
 
 <br>
 
+#### 3:2 Spin-Orbit Resonance
+
+
+
+#### Motivation behind research
+
 
 
 <br>
@@ -167,4 +173,5 @@ ___
 It would be interesting to run... 
 
 It would be useful to test other... 
+
 
